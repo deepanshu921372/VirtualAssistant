@@ -45,7 +45,7 @@ h1 {
 
 #btn {
     width: 70%; 
-    max-width: 300px; 
+    max-width: 350px; 
     background: linear-gradient(to right, rgb(21, 145, 207), rgb(201, 41, 116));
     padding: 10px;
     display: flex;
@@ -72,13 +72,13 @@ h1 {
         max-width: 40vw; 
     }
     h1 {
-        font-size: 4vw; 
+        font-size: 6vw; 
     }
     #name, #va {
         font-size: 5vw; 
     }
     #btn {
-        font-size: 3vw; 
+        font-size: 4vw; 
     }
 }
 
