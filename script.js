@@ -2,9 +2,12 @@ let btn = document.querySelector("#btn");
 let content = document.querySelector("#content");
 let voice = document.querySelector("#voice");
 let voices= [];
+
 function populateVoices() {
     voices = window.speechSynthesis.getVoices();
 }
+
+
 function speak(text){
     let text_speak = new SpeechSynthesisUtterance(text);
     text_speak.rate = 1;
@@ -17,6 +20,7 @@ function speak(text){
     }
     window.speechSynthesis.speak(text_speak);
 }
+
 function wishMe(){
     let day = new Date();
     let hours = day.getHours();
@@ -33,6 +37,7 @@ function wishMe(){
 window.addEventListener('load',()=>{
     wishMe();
 })
+
 let speechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
 let recognition = new speechRecognition()
 recognition.onresult = (event) => {
@@ -46,7 +51,9 @@ btn.addEventListener("click", () => {
     btn.style.display = "none";
     voice.style.display = "block";
 })
+
 window.speechSynthesis.onvoiceschanged = populateVoices;
+
 const knowledgeBase = {
     "who is the president of the USA": "The current president of the USA is Joe Biden.",
     "what is the capital of France": "The capital of France is Paris.",
@@ -59,6 +66,7 @@ const knowledgeBase = {
     "who is the founder of Microsoft": "The founder of Microsoft is Bill Gates.",
     "what is the speed of light": "The speed of light is approximately 299,792 kilometers per second."
 };
+
 function takeCommand(message) {
     btn.style.display = "flex";
     voice.style.display = "none";   

@@ -1,77 +1,118 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-    height: 100vh; 
-    width: 100vw; 
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: aliceblue;
+  font-family: 'Protest Guerrilla', sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
-#logo {
-    max-width: 30vw;
-    width: 200px; 
+
+/* Spline 3D Object Styling */
+#spline-container {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+#spline-3d {
+  width: 80%;
+  height: 100%;
+  border: none;
+}
+
+.container {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 h1 {
-    color: aliceblue;
-    font-family: "Protest Guerrilla", sans-serif;
-    font-size: 2.5vw; 
+  font-size: 2.5rem;
 }
+
 #name {
-    color: rgb(212, 43, 122);
-    font-size: 3vw; 
+  color: rgb(212, 43, 122);
 }
+
 #va {
-    color: rgb(43, 206, 212);
-    font-size: 3vw; 
+  color: rgb(43, 206, 212);
 }
+
 #voice {
-    width: 150px;
-    display: none;
+  width: 80px;
+  display: none;
 }
+
 #btn {
-    width: 70%; 
-    max-width: 350px; 
-    background: linear-gradient(to right, rgb(21, 145, 207), rgb(201, 41, 116));
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 1.5vw;
-    border-radius: 20px;
-    color: white;
-    box-shadow: 2px 2px 10px rgb(21, 145, 207), 2px 2px 10px rgb(201, 41, 116);
-    border: none;
-    transition: all 0.5s;
-    cursor: pointer;
+  background: linear-gradient(to right, rgb(21, 145, 207), rgb(201, 41, 116));
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgb(21, 145, 207), 0px 4px 10px rgb(201, 41, 116);
+  transition: all 0.3s ease-in-out;
 }
+
 #btn:hover {
-    box-shadow: 2px 2px 20px rgb(21, 145, 207), 2px 2px 20px rgb(201, 41, 116);
-    letter-spacing: 1px;
+  box-shadow: 0px 6px 15px rgb(21, 145, 207), 0px 6px 15px rgb(201, 41, 116);
 }
-@media (max-width: 600px) {
-    #logo {
-        max-width: 40vw; 
-    }
-    h1 {
-        font-size: 6vw; 
-    }
-    #name, #va {
-        font-size: 5vw; 
-    }
-    #btn {
-        font-size: 4vw; 
-    }
+
+#btn img {
+  width: 20px;
 }
-@media (min-width: 601px) and (max-width: 1200px) {
-    #btn {
-        font-size: 2vw; 
-    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #btn {
+    font-size: 0.9rem;
+  }
+
+  #spline-3d {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #btn {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  #spline-3d {
+    height: 250px;
+  }
 }

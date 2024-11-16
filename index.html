@@ -3,21 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nova-The Virtual Assistant</title>
-    <link rel="shortcut icon" href="image.png" type="image/x-icon" />
+    <title>Nova - The Virtual Assistant</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="mic.svg" type="image/x-icon" />
   </head>
   <body>
-    <img src="image.png" alt="logo" id="logo" />
-    <h1>
-      I'm <span id="name">Nova</span>, Your
-      <span id="va">Virtual Assistant</span>
-    </h1>
-    <img id="voice" src="voice.gif" alt="voice" />
-    <button id="btn">
-      <img src="mic.svg" alt="mic" />
-      <span id="content"> Click here for talk to me</span>
-    </button>
+    <div id="spline-container">
+      <iframe
+        src="https://my.spline.design/robottutorialinteractiveeventscopy-5afdec85416e58f7bc2688d6e87d0760/"
+        id="spline-3d"
+        frameborder="0"
+        title="3D Virtual Assistant"
+      ></iframe>
+    </div>
+
+    <div class="container">
+      <h1>
+        I'm <span id="name">Nova</span>, Your
+        <span id="va">Virtual Assistant</span>
+      </h1>
+      <img id="voice" src="voice.gif" alt="Listening..." />
+      <button id="btn">
+        <img src="mic.svg" alt="mic" />
+        <span id="content">Click here to talk to me</span>
+      </button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
