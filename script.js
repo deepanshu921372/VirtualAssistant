@@ -75,7 +75,9 @@ function takeCommand(message) {
         speak("Hello Sir, What can I help you?");
     } else if (lowerCaseMessage.includes("who are you")) {
         speak("I am a virtual assistant, created and guided by Deepanshu Sir.");
-    } else if (lowerCaseMessage.includes("open youtube")) {
+    }else if (lowerCaseMessage.includes("how are you")) {
+        speak("I am fine, Thank you for asking. How can I help you?");
+    }else if (lowerCaseMessage.includes("open youtube")) {
         window.open("http://www.youtube.com");
     } else if (lowerCaseMessage.includes("open stack overflow")) {
         window.open("https://stackoverflow.com/");
