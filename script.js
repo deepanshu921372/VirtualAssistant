@@ -3,11 +3,11 @@ let content = document.querySelector("#content");
 let voice = document.querySelector("#voice");
 let voices= [];
 
+if (voices.length !== 0) {
+    wishMe();
+}
 function populateVoices() {
     voices = window.speechSynthesis.getVoices();
-    if (voices.length !== 0) {
-        wishMe();
-    }
 }
 
 
