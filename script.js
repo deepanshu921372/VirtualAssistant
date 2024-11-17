@@ -5,6 +5,9 @@ let voices= [];
 
 function populateVoices() {
     voices = window.speechSynthesis.getVoices();
+    if (voices.length !== 0) {
+        wishMe();
+    }
 }
 
 
